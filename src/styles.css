@@ -1,0 +1,148 @@
+body {
+  margin-top: 50px;
+  font-family: "Montserrat", sans-serif;
+}
+#search {
+  display: inline;
+  background-color: #0b5ed7;
+  color: white;
+  border-style: solid 1px #65abd6;
+  border-radius: 5px;
+  border-color: #0d6efd;
+padding: 5px 10px; 
+margin-left: 5px;
+font-size: 15px;
+
+}
+#current{
+  font-size: 15px;
+  width: 305px;
+  padding: 5px 20px; 
+  margin-left: 12px;
+
+
+}
+#searchfield{
+  margin-left: 10px;
+}
+#farenheit
+{ margin-right: 10px;}
+
+.pictureofcity,
+.windspeed,
+.sun {
+  border-radius: 5px;
+}
+
+.cityname {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.countryname {
+  font-size: 25px;
+}
+.degreeunit {
+ 
+  background-color: #0b5ed7;
+  color: white;
+  border-style: solid 1px #65abd6;
+  display: inline;
+}
+
+
+.btn-outline-secondary:focus {     
+  background-color:#0b5ed7;    
+  color: white;
+ 
+}
+
+.windspeed,
+.sun {
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #adcbdd;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin: 0px 10px;
+}
+
+.windicon,
+.percipirationicon,
+.sunicon {
+  font-size: 50px;
+  text-align: center;
+  color: #65abd6;
+  margin: 50px;
+  margin-bottom: 60px;
+}
+.windicon,
+.percipirationicon {
+  margin-top: 70px;
+}
+.searchbar {
+  width: 550px;
+  display: inline;
+}
+
+.searchbar:hover {
+  box-shadow: inset 0.5px 0.5px 2px #adcbdd;
+}
+.degree {
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 20px 0px 20px 10px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #adcbdd;
+  border-radius: 5px;
+  padding: 40px;
+  width: 320px;
+}
+.dayoftheweek {
+  font-size: 25px;
+  font-weight: normal;
+}
+.date {
+  font-size: 18px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+.nextdays {
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #adcbdd;
+  border-radius: 5px;
+  padding: 60px 20px;
+  margin: 20px 10px 20px 10px;
+  font-size: 18px;
+}
+.nextdays:hover {
+  box-shadow: 1px 1px 5px #adcbdd;
+}
+.firstnextday {
+  margin: 20px 10px 20px 25px;
+}
+.degreeofnextdays {
+  font-weight: bolder;
+  font-size: 18px;
+}
+.nextdaysicons {
+  text-align: center;
+  color: #65abd6;
+  margin: 10px 10px;
+  font-size: 25px;
+}
+.iconmainday {
+  font-size: 50px;
+  color: #65abd6;
+  margin: 30px 60px 0px 20px;
+}
+.daysofnextdays {
+  font-size: 16px;
+}
+.secondaryinfos {
+  padding-left: 12px;
+}
+.lastdayoftheweek {
+  margin-right: 0px;
+}
