@@ -8,9 +8,16 @@ function showTemperature(response){
   countryname.innerHTML=` ,${country}`
   let city= (response.data.name)
   let citySearch= document.querySelector(".cityname");
-
   citySearch.innerHTML=`${city}`;
-
+  let windSpeed=document.querySelector(".windSpeed");
+let speed=Math.round(response.data.wind.speed)
+windSpeed.innerHTML=`${speed}`
+let humidity=document.querySelector(".humidity")
+let humiditypercentage=Math.round(response.data.main.humidity)
+humidity.innerHTML=`${humiditypercentage}`
+let description=document.querySelector(".description")
+let describe=(response.data.weather.main)
+description.innerHTML=`${describe}`
 }
 
 function changeDegreeToFarenheit (){
@@ -36,7 +43,6 @@ function searchTheCity(event) {
   let searchTerm= document.querySelector("#searchfield")
   let city= searchTerm.value
   onload(city);
-
 }
 
 function showcity(response){
@@ -60,8 +66,6 @@ function clickcurrent(event){
 event.preventDefault();
 navigator.geolocation.getCurrentPosition(yourposition);
 }
-
-
 onload("Yazd");
 
 let searchButton = document.querySelector("#search");
@@ -74,33 +78,7 @@ celsiusButton.addEventListener("click",changeDegreeToCelsius )
 
 let currentButton= document.querySelector("#current") 
 currentButton.addEventListener("click", clickcurrent)
-let weather = [
-  {
-    name: "paris",
-    temp: 19.7,
-    humidity: 80,
-  },
-  {
-    name: "tokyo",
-    temp: 17.3,
-    humidity: 50,
-  },
-  {
-    name: "lisbon",
-    temp: 30.2,
-    humidity: 20,
-  },
-  {
-    name: "san francisco",
-    temp: 20.9,
-    humidity: 100,
-  },
-  {
-    name: "moscow",
-    temp: -5,
-    humidity: 20,
-  },
-];
+
 let now = new Date();
 let insertCurrentDate = document.querySelector(".currentdate");
 let weekDays = [
@@ -126,47 +104,3 @@ console.log(time);
 
 insertCurrentDate.innerHTML = `${day} ${time}`;
 
-let temp0 = Math.round(weather[0].temp);
-
-let temp1 = Math.round(weather[1].temp);
-let temp2 = Math.round(weather[2].temp);
-
-let temp3 = Math.round(weather[3].temp);
-let temp4 = Math.round(weather[4].temp);
-///let search = prompt("enter a city");
-
-if (search === weather[0].name) {
-  alert(
-    `It is currently ${temp0} ℃ (${temp0 * 1.5 + 32})℉ in ${
-      weather[0].name
-    } with a humidity of ${weather[0].humidity}% `
-  );
-} else if (search === weather[1].name) {
-  alert(
-    `It is currently ${temp1} ℃ (${temp1 * 1.5 + 32})℉ in ${
-      weather[1].name
-    } with a humidity of ${weather[1].humidity}% `
-  );
-} else if (search === weather[2].name) {
-  alert(
-    `It is currently ${temp2} ℃ (${temp2 * 1.5 + 32})℉ in ${
-      weather[2].name
-    } with a humidity of ${weather[2].humidity}% `
-  );
-} else if (search === weather[3].name) {
-  alert(
-    `It is currently ${temp3} ℃ (${temp3 * 1.5 + 32})℉ in ${
-      weather[3].name
-    } with a humidity of ${weather[3].humidity}% `
-  );
-} else if (search === weather[4].name) {
-  alert(
-    `It is currently ${temp4} ℃ (${temp4 * 1.5 + 32})℉ in ${
-      weather[4].name
-    } with a humidity of ${weather[4].humidity}% `
-  );
-} else {
-  ///alert(
-    `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${search}`
- /// );
-}

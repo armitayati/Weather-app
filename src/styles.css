@@ -20,7 +20,7 @@ body {
 }
 #current{
   font-size: 15px;
-  width: 160px;
+  width: 150px;
   padding: 5px 10px; 
 }
 #celsius{
@@ -40,7 +40,7 @@ body {
   border-color: #adcbdd;
   border-radius: 5px;
   background-color: rgb(235, 229, 250, .1);
-  width:800px;
+  width:700px;
 }
 .cityname {
   font-size: 30px;
@@ -84,8 +84,12 @@ body {
   border-color: #adcbdd;
   border-radius: 5px;
   padding: 10px 10px 10px 10px; 
-  width: 580px;
+  width: 565px;
   display: block;
+}
+.description{
+  font-size: 30px;
+  font-weight: bolder;
 }
 .dayoftheweek {
   font-size: 25px;
@@ -96,13 +100,16 @@ body {
   font-weight: lighter;
   margin: 15px  15px; 
 }
+.forcastSection{
+  width: 680px;
+}
 .nextdays {
   border-style: solid;
   border-width: 0.5px;
   border-color: #adcbdd;
   border-radius: 5px;
   padding: 60px 20px;
-  margin: 20px 10px 20px 10px;
+  margin: 20px 5px 20px 5px;
   font-size: 18px;
 }
 .nextdays:hover {
