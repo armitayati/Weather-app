@@ -26,11 +26,11 @@ iconmainday.setAttribute("src", `https://openweathermap.org/img/wn/${response.da
 function changeDegreeToFarenheit (){
 let degree = document.querySelector(".celsiusDegree");
 let farenheitTemperature= (celsiusTemperature*9)/5+32;
-degree.innerHTML=Math.round(farenheitTemperature)
+degree.innerHTML=`${Math.round(farenheitTemperature)} ℉` ;
 }
 function changeDegreeToCelsius(){
   let degree = document.querySelector(".celsiusDegree");
-  degree.innerHTML= Math.round( celsiusTemperature);
+  degree.innerHTML=`${Math.round( celsiusTemperature)}  ℃` ;
 
   }
 function onload(response){
