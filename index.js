@@ -16,7 +16,7 @@ let humidity=document.querySelector(".humidity")
 let humiditypercentage=Math.round(response.data.main.humidity)
 humidity.innerHTML=`${humiditypercentage}`
 let description=document.querySelector(".description")
-let describe=(response.data.weather.main)
+let describe=(response.data.weather[0].description)
 description.innerHTML=`${describe}`
 }
 
@@ -35,6 +35,8 @@ function onload(response){
   let city= (response)
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 console.log(city)
+console.log(apiUrl)
+
   axios.get(apiUrl).then(showTemperature);
 
 }
