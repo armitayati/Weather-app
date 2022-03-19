@@ -42,6 +42,9 @@ body {
   background-color: rgb(235, 229, 250, .1);
   width:700px;
 }
+.celsiusDegree{
+  margin-left: 20px;
+}
 .cityname {
   font-size: 30px;
   font-weight: bolder;
@@ -55,6 +58,7 @@ body {
   color: white;
   border-style: solid 1px #65abd6;
   display: inline;
+  
 }
 .btn-outline-secondary:hover {     
   background-color:#0b5ed7;    
@@ -88,13 +92,9 @@ body {
   display: block;
 }
 .description{
-  margin-left: 30px;
   font-size: 20px;
   font-weight: bolder;
   text-transform: capitalize;
-}
-.description:first-letter{
-
 }
 .dayoftheweek {
   font-size: 25px;
@@ -136,7 +136,7 @@ body {
 .iconmainday {
   font-size: 30px;
   color: #65abd6;
-  margin: 20px 10px 0px 10px;
+  margin-left: 30px;
 }
 .daysofnextdays {
   font-size: 16px;

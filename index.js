@@ -18,6 +18,8 @@ humidity.innerHTML=`${humiditypercentage}`
 let description=document.querySelector(".description")
 let describe=(response.data.weather[0].description)
 description.innerHTML=`${describe}`
+let iconmainday=document.querySelector(".iconmainday")
+iconmainday.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function changeDegreeToFarenheit (){
@@ -105,4 +107,3 @@ let time = `${hour}: ${minute}`;
 console.log(time);
 
 insertCurrentDate.innerHTML = `${day} ${time}`;
-
