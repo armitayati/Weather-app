@@ -27,21 +27,28 @@ axios.get(apiUrl).then(displayForecast);
 }
 getforecast(response.data.coord)
 }
-
+function formatday(dayforecast){
+  let date= new Date(dayforecast*1000)
+  let day= date.getDay();
+  return weekDays[day];
+}
 function displayForecast(response){
-  console.log(response.data.daily)
+let forecast= response.data.daily
   let forecastElement= document.querySelector("#forecast")
   let forecastHTML= `<div class="row">`;
-  let days = ["Sat","Sun","Mon","Tue","Wed","Thu","Fri"]
-  days.forEach(function(day){
-    
+  forecast.forEach(function(forecastday, index){
+    if (index < 5){
     forecastHTML= forecastHTML + `<div class="col-2 nextdays">
-    <span class= "daysofnextdays" ><small>  ${day} </small></span><br>
-   <span class="degreeofnextdays"><span class="max-temperature"> 15℃ </span>|<span class="min-temperature"> 12℃ </span></span> 
-   <i class="fas fa-cloud-rain nextdaysicons"></i>
+    <span class= "daysofnextdays" ><small>  ${formatday(forecastday.dt)} </small></span><br>
+   <span class="degreeofnextdays"><span class="max-temperature"> ${Math.round(forecastday.temp.max)}℃ </span>|<span class="min-temperature">${Math.round(forecastday.temp.max)}℃ </span></span> 
+   <img 
+   src="https://openweathermap.org/img/wn/${forecastday.weather[0].icon}@2x.png"
+   width="50px"
+   >
   </div>`;
-
+}
   });
+
   forecastHTML = forecastHTML +`</div>`
   forecastElement.innerHTML= forecastHTML
   }
@@ -100,13 +107,13 @@ currentButton.addEventListener("click", clickcurrent)
 let now = new Date();
 let insertCurrentDate = document.querySelector(".currentdate");
 let weekDays = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
 ];
 let day = weekDays[now.getDay()];
 let hour = now.getHours();

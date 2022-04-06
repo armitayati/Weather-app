@@ -114,7 +114,7 @@ body {
   border-color: #adcbdd;
   border-radius: 5px;
   padding: 10px 10px;
-  margin: 10px 5px;
+  margin: 10px 8px;
   text-align: center;
 }
 .nextdays:hover {
@@ -124,12 +124,7 @@ body {
 .degreeofnextdays {
   font-size: 14px;
 }
-.nextdaysicons {
-  text-align: center;
-  color: #65abd6;
-  margin: 10px 10px;
-  font-size: 25px;
-}
+
 .iconmainday {
   font-size: 30px;
   color: #65abd6;
