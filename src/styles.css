@@ -113,19 +113,17 @@ body {
   border-width: 0.5px;
   border-color: #adcbdd;
   border-radius: 5px;
-  padding: 60px 20px;
-  margin: 20px 5px 20px 5px;
-  font-size: 18px;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  text-align: center;
 }
 .nextdays:hover {
   box-shadow: 1px 1px 5px #adcbdd;
 }
-.firstnextday {
-  margin: 20px 5px 20px 10px;
-}
+
 .degreeofnextdays {
-  font-weight: bolder;
-  font-size: 18px;
+  font-size: 15px;
+  margin-top: 20px;
 }
 .nextdaysicons {
   text-align: center;
@@ -140,10 +138,14 @@ body {
 }
 .daysofnextdays {
   font-size: 16px;
+  margin-bottom: 10px;
 }
 .secondaryinfos {
   padding-left: 12px;
 }
 .lastdayoftheweek {
   margin-right: 0px;
+}
+.min-temperature{
+  opacity: 0.5;
 }
