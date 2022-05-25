@@ -129,4 +129,3 @@ insertCurrentDate.innerHTML = `${day} ${time}`;
 
 let celsiusTemperature= null
 onload("Yazd");
-
